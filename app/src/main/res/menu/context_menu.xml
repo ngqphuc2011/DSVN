@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuDetail"
+        android:title="Chi tiết"></item>
+    <item
+        android:id="@+id/menuAdd"
+        android:title="Thêm mới"></item>
+    <item
+        android:id="@+id/menuDelete"
+        android:title="Xóa"></item>
+</menu>

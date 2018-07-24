@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TicketBookingActivity">
+
+    <!-- 1. Header -->
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/header"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="56dp"-->
+        <!--android:background="#008ACB">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:text="Đặt vé Online"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:textSize="18sp" />-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/menuBooking"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:src="@drawable/ic_booking" />-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/menuService"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_toLeftOf="@+id/menuBooking"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:src="@drawable/ic_service" />-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/menuHome"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_toLeftOf="@+id/menuService"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:src="@drawable/ic_home" />-->
+    <!--</RelativeLayout>-->
+
+
+    <!--2. Footer -->
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="#008ACB"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giờ tàu | Quy định | Khuyến mãi | Hướng dẫn"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!--3. Body-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/footer"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ticketBooking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vé đã đặt"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/black" />
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/line"></ListView>
+        </LinearLayout>
+
+</RelativeLayout>

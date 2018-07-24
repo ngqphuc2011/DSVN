@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- 1. Header -->
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/header"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="56dp"-->
+    <!--android:background="#008ACB">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:text="Đặt vé Online"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:textSize="18sp" />-->
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/menuBooking"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:background="@android:color/transparent"-->
+    <!--android:src="@drawable/ic_booking" />-->
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/menuService"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_toLeftOf="@+id/menuBooking"-->
+    <!--android:background="@android:color/transparent"-->
+    <!--android:src="@drawable/ic_service" />-->
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/menuHome"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_toLeftOf="@+id/menuService"-->
+    <!--android:background="@android:color/transparent"-->
+    <!--android:src="@drawable/ic_home" />-->
+    <!--</RelativeLayout>-->
+
+
+    <!--2. Footer -->
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="#008ACB"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giờ tàu | Quy định | Khuyến mãi | Hướng dẫn"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <!-- 3. Body -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lblTreEm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtNguoi"
+                android:layout_marginLeft="10dp"
+                android:text="Trẻ em: "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/lblNguoi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtNgayDen"
+                android:layout_marginLeft="10dp"
+                android:text="Người: "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/lblNgayDen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtNgayDi"
+                android:layout_marginLeft="10dp"
+                android:text="Ngày đến: "
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/spinnerGaDen"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/lblGaDen"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:entries="@array/dsGa" />
+
+            <TextView
+                android:id="@+id/lblGaDen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerGaDi"
+                android:layout_marginLeft="10dp"
+                android:text="Ga đến: "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/lblDatVeTau"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Đặt vé tàu"
+                android:textColor="#ff9100"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <EditText
+                android:id="@+id/txtHoVaTen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblDatVeTau"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:ems="10"
+                android:hint="Họ và Tên"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/txtSoDienThoai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtHoVaTen"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:ems="10"
+                android:hint="Số điện thoại"
+                android:inputType="phone" />
+
+            <TextView
+                android:id="@+id/lblGaDi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtSoDienThoai"
+                android:layout_marginLeft="10dp"
+                android:text="Ga đi: "
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/spinnerGaDi"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/lblGaDi"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:entries="@array/dsGa" />
+
+            <RadioGroup
+                android:id="@+id/radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerGaDen"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radMotChieu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Một chiều" />
+
+                <RadioButton
+                    android:id="@+id/radKhuHoi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:layout_toRightOf="@+id/radMotChieu"
+                    android:text="Khứ hồi" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/lblNgayDi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radio"
+                android:layout_marginLeft="10dp"
+                android:text="Ngày đi: "
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/txtNgayDen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/txtNgayDi"
+                android:layout_marginRight="10dp"
+                android:ems="10"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="dd/mm/yyyy"
+                android:inputType="date"
+                android:onClick="openPickerNgayDen" />
+
+            <EditText
+                android:id="@+id/txtNgayDi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/radio"
+                android:layout_marginRight="10dp"
+                android:ems="10"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="dd/mm/yyyy"
+                android:inputType="date"
+                android:onClick="openPickerNgayDi" />
+
+            <EditText
+                android:id="@+id/txtNguoi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/txtNgayDen"
+                android:layout_marginRight="10dp"
+                android:ems="5"
+                android:hint="1"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/txtTreEm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/txtNguoi"
+                android:layout_marginRight="10dp"
+                android:ems="5"
+                android:hint="0"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/btnDatVe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtTreEm"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Đặt vé" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
